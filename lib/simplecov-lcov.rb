@@ -82,7 +82,7 @@ module SimpleCov
       end
 
       def format_file(file)
-        filename = file.filename.gsub("#{SimpleCov.root}/", './')
+        filename = file.filename #.gsub("#{SimpleCov.root}/", './')
         "SF:#{filename}\n#{format_lines(file)}\nend_of_record\n"
       end
 
